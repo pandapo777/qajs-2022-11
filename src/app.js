@@ -55,34 +55,19 @@
 // for ... in
 // Конструкция "switch"
 
+const scores1 = {
+  Anna: 10,
+  Olga: 1,
+  Ivan: 5,
+  Andrey: 18,
+};
 
-// const scores = [
-//   {
-//   "name": "Anna",
-//   "academicPerfomance": 10
-// },
-// {
-//   "name": "Olga",
-//   "academicPerfomance": 2
-// },
-// {
-//   "name": "Ivan",
-//   "academicPerfomance": 5
-// }
-// ]
-const scores = [
-  {
-    Anna: 10,
-  },
-  {
-    Olga: 1,
-  },
-  {
-    Ivan: 5,
-  }
-]
-  
+const getScore = () => {
+  let arr1 = Object.values(scores1);
+  let sum1 = arr1.reduce(function (x, y) {
+    return x + y;
+  }, 0);
+  console.log("Sum is " + sum1);
+};
 
-  // getScore(scores.name)
-  // console.log("getScore", getScore);
-  console.log("scores[0]", scores[0])
+getScore();
